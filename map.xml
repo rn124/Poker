@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<map proto="1.3.3">
+	<name>Poker</name>
+	<version>1.0.4</version>
+	<objective>敵を残滅せよ/Whatever annihilate the enemy team</objective>
+	<authors>
+ 		<author>OverFuture</author>
+	</authors>
+	<contributors>
+		<contributor>nissi0709</contributor>
+		<contributor>ryoukikakarityou</contributor>
+	</contributors>
+	<teams>
+		<team max="8" color="purple">Purple Team</team>
+		<team max="8" color="cyan">Cyan Team</team>
+	</teams>
+	<blitz>
+		<time>600</time>
+		<lives>0</lives>
+		<broadcastLives>true</broadcastLives>
+		<title>Blitz</title>
+	</blitz>
+	<kits>
+		<kit name="spawn">
+			<item slot="0" enchantment="damege_all:3;fire_aspect:1;durability:3">diamond_sword</item>
+			<item slot="1" enchantment="arrow_damage:5;arrow_fire:1">bow</item>
+			<item slot="2" damage="16421" bind="true">potion</item>
+			<item slot="3" damage="16421" bind="true">potion</item>
+			<item slot="4" damage="16421" bind="true">potion</item>
+			<item slot="5" damage="8226" bind="true">potion</item>
+			<item slot="6" damage="8259" bind="true">potion</item>
+			<item slot="7" damage="16421" bind="true">potion</item>
+			<item slot="8" amount="64">golden_carrot</item>
+			<item slot="18" damage="16421" bind="true">potion</item>
+			<item slot="19" damage="16421" bind="true">potion</item>
+			<item slot="20" damage="16421" bind="true">potion</item>
+			<item slot="21" damage="16421" bind="true">potion</item>
+			<item slot="22" damage="16421" bind="true">potion</item>
+			<item slot="23" damage="8226" bind="true">potion</item>
+			<item slot="24" damage="16394" bind="true">potion</item>
+			<item slot="25" damage="16392" bind="true">potion</item>
+			<item slot="26" damage="16388" bind="true">potion</item>
+			<item slot="27" damage="16421" bind="true">potion</item>
+			<item slot="28" amount="64">arrow</item>
+			<item slot="29" damage="16421" bind="true">potion</item>
+			<item slot="30" damage="16421" bind="true">potion</item>
+			<item slot="31" damage="16421" bind="true">potion</item>
+			<item slot="32" damage="8226" bind="true">potion</item>
+			<item slot="33" damage="16421" bind="true">potion</item>
+			<item slot="34" damage="16421" bind="true">potion</item>
+			<item slot="35" damage="16421" bind="true">potion</item>
+			<item slot="100" enchantment="protection_environmental:2;protection_fall:4;durability:3">diamond_boots</item>
+			<item slot="101" enchantment="protection_environmental:2;durability:3">diamond_leggings</item>
+			<item slot="102" enchantment="protection_environmental:2;durability:3">diamond_chestplate</item>
+			<item slot="103" enchantment="protection_environmental:2;durability:3">diamond_helmet</item>
+			<potion duration="7" amplifier="20">damage_resistance</potion>
+			<potion duration="7" amplifier="20">regeneration</potion>
+		</kit>
+	</kits>
+	<itemremove>
+		<item>diamond_sword</item>
+		<item>bow</item>
+		<item>arrow</item>
+		<item>golden_carrot</item>
+		<item>glass_bottle</item>
+		<item>diamond_helmet</item>
+		<item>diamond_chestplate</item>
+		<item>diamond_leggings</item>
+		<item>diamond_boots</item>
+	</itemremove>
+	<spawns>
+		<spawn team="purple" yaw="-135" kit="spawn">
+			<cuboid min="-38,11,22" max="-40,11,-25"/>
+		</spawn>
+		<spawn team="cyan" yaw="45" kit="spawn">
+			<cuboid min="19,11,-35" max="21,11,-37"/>
+		</spawn>
+		<default yaw="180">
+			<cuboid min="-10,42,39" max="-9,42,40"/>
+		</default>
+	</spawns>
+	<regions>
+		<apply block="deny-break" message="破壊できません/You can not break.">
+			<negative>
+				<block>0,0,0</block>
+			</negative>
+		</apply>
+	</regions>
+<include src="tutorial.xml"/>
+	<tutorial>
+		<stage title="Poker(Blitz)">
+			<message>
+				<line>This map is a `a`lPoker`r(Blitz) map.</line>
+				<line>The objective is annihilate the enemy.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>このマップは`a`lPoker`r(Blitz)マップです。</line>
+				<line>敵を全滅させる事が目標になります。</line>
+			</message>
+			<teleport>
+				<point yaw="180" pitch="0">=-9,34,27</point>
+			</teleport>
+		</stage>
+		<stage title="Purple Team Spawn Point">
+			<message>
+				<line>Here is the `5Purple team `r spawn point.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>ここは`5Purpleチーム`rのスポーン地点です。</line>
+			</message>
+			<teleport>
+				<point yaw="-135" pitch="0">-40,11,-25</point>
+			</teleport>
+		</stage>
+	</tutorial>
+</map>
